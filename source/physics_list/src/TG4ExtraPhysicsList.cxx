@@ -35,7 +35,7 @@
 #define G4MT_physicsVector \
   ((G4VMPLsubInstanceManager.offset[g4vmplInstanceID]).physicsVector)
 
-const G4double TG4ExtraPhysicsList::fgkDefaultCutValue = 1.0 * mm;
+const G4double TG4ExtraPhysicsList::fgkDefaultCutValue = 0.1 * mm;
 
 namespace
 {
