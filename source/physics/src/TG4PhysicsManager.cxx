@@ -53,7 +53,7 @@
 #include <G4SystemOfUnits.hh>
 
 TG4PhysicsManager* TG4PhysicsManager::fgInstance = 0;
-const G4double TG4PhysicsManager::fgkDefautCut = 0.01 * mm;
+const G4double TG4PhysicsManager::fgkDefautCut = 2 * mm;
 TG4ProcessMap* TG4PhysicsManager::fgProcessMap = 0;
 
 //_____________________________________________________________________________
