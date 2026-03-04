@@ -142,7 +142,7 @@ void TG4ProcessMapPhysics::FillMap()
   pMap->Add(fPositronNuclear, kPPositronNuclear, kHADR);           // TG4 value: 172
   pMap->Add(fMuonNuclear, kPMuonNuclear, kMUNU);                   // TG4 value: 173
   pMap->Add(fPhotoNuclear, kPPhotoNuclear, kHADR);                 // TG4 value: 174
-  pMap->Add(fMuonDISPythia6, kPUserDefined, kMUNU);             // TG4 value: 175
+  pMap->Add(fMuonDISPythia6, kPUserDefined, kNoG3Controls);        // TG4 value: 175
 
   // G4DecayProcessType: 201 - 231
   pMap->Add(DECAY, kPDecay, kDCAY);                                // G4 value: 201
@@ -192,7 +192,7 @@ void TG4ProcessMapPhysics::UpdateHadronicProcessSubType(G4VProcess* process)
      { "muon", fMuonNuclear },
      { "mu-", fMuonNuclear },
      { "photon", fPhotoNuclear },
-     { "DIS", fMuonDISPythia6 }};
+     { "muonDIS_withPythia6", fMuonDISPythia6 }};
 
   for ( auto newCode : newCodes) {
     if ( G4StrUtil::contains(processName, newCode.first)) {
