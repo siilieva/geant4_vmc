@@ -28,7 +28,8 @@ enum TG4HadronicProcessType
   fElectronNuclear = 171,
   fPositronNuclear = 172,
   fMuonNuclear     = 173,
-  fPhotoNuclear    = 174
+  fPhotoNuclear    = 174,
+  fMuonDISPythia6  = 175
 };
 
 /// \ingroup physics_list
