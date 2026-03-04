@@ -142,7 +142,7 @@ void TG4ProcessMapPhysics::FillMap()
   pMap->Add(fPositronNuclear, kPPositronNuclear, kHADR);           // TG4 value: 172
   pMap->Add(fMuonNuclear, kPMuonNuclear, kMUNU);                   // TG4 value: 173
   pMap->Add(fPhotoNuclear, kPPhotoNuclear, kHADR);                 // TG4 value: 174
-  pMap->Add(fMuonDIS, kPMuonDISPythia6, kMUNU);                   // TG4 value: 175
+  pMap->Add(fMuonDISPythia6, kPMuonDISPythia6, kMUNU);             // TG4 value: 175
 
   // G4DecayProcessType: 201 - 231
   pMap->Add(DECAY, kPDecay, kDCAY);                                // G4 value: 201
