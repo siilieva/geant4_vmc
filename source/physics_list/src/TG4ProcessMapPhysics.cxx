@@ -184,14 +184,15 @@ void TG4ProcessMapPhysics::UpdateHadronicProcessSubType(G4VProcess* process)
 
   auto processName = process->GetProcessName();
 
-  if (! G4StrUtil::contains(processName, "Nuclear")) return;
+  if (! G4StrUtil::contains(processName, "Nuclear") || (! G4StrUtil::contains(processName, "DIS"))) return;
 
   std::set<std::pair<G4String, G4int>> newCodes =
     {{ "electron", fElectronNuclear },
      { "positron", fPositronNuclear },
      { "muon", fMuonNuclear },
      { "mu-", fMuonNuclear },
-     { "photon", fPhotoNuclear }};
+     { "photon", fPhotoNuclear },
+     { "DIS", fMuonDISPythia6 }};
 
   for ( auto newCode : newCodes) {
     if ( G4StrUtil::contains(processName, newCode.first)) {
